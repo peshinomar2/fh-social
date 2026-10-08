@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>F&H | Connect With Us</title>
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
     <style>
         * {
@@ -230,6 +232,39 @@
                 width: 48px;
                 height: 48px;
             }
+           ```css
+.icon i {
+    font-size: 27px;
+}
+
+.icon.whatsapp {
+    color: #25D366;
+}
+
+.icon.instagram {
+    color: #E1306C;
+}
+
+.icon.facebook {
+    color: #1877F2;
+}
+
+.icon.tiktok {
+    color: #ffffff;
+}
+```
+
+.social:nth-child(2) .icon {
+    color: #E1306C;
+}
+
+.social:nth-child(3) .icon {
+    color: #1877F2;
+}
+
+.social:nth-child(4) .icon {
+    color: #ffffff;
+}
 
             .social-name {
                 font-size: 11px;
@@ -256,32 +291,45 @@
             <div class="scan-text">to visit our social media</div>
         </div>
 
-        <div class="socials">
+    
+<div class="socials">
 
-            <div class="social" onclick="openWhatsApp()">
-                <div class="icon">W</div>
-                <div class="social-name">WhatsApp</div>
-            </div>
-
-            <a href="https://www.instagram.com/langay_fh/"
-               class="social" target="_blank" rel="noopener noreferrer">
-                <div class="icon">I</div>
-                <div class="social-name">Instagram</div>
-            </a>
-
-            <a href="https://www.facebook.com/share/1C6jze4rGW/"
-               class="social" target="_blank" rel="noopener noreferrer">
-                <div class="icon">f</div>
-                <div class="social-name">Facebook</div>
-            </a>
-
-            <a href="https://www.tiktok.com/@langay_fh"
-               class="social" target="_blank" rel="noopener noreferrer">
-                <div class="icon">T</div>
-                <div class="social-name">TikTok</div>
-            </a>
-
+    <!-- WhatsApp -->
+    <div class="social" onclick="openWhatsApp()">
+        <div class="icon whatsapp">
+            <i class="fa-brands fa-whatsapp"></i>
         </div>
+        <div class="social-name">WhatsApp</div>
+    </div>
+
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/langay_fh/"
+       class="social" target="_blank" rel="noopener noreferrer">
+        <div class="icon instagram">
+            <i class="fa-brands fa-instagram"></i>
+        </div>
+        <div class="social-name">Instagram</div>
+    </a>
+
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/share/1C6jze4rGW/"
+       class="social" target="_blank" rel="noopener noreferrer">
+        <div class="icon facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+        </div>
+        <div class="social-name">Facebook</div>
+    </a>
+
+    <!-- TikTok -->
+    <a href="https://www.tiktok.com/@langay_fh"
+       class="social" target="_blank" rel="noopener noreferrer">
+        <div class="icon tiktok">
+            <i class="fa-brands fa-tiktok"></i>
+        </div>
+        <div class="social-name">TikTok</div>
+    </a>
+
+</div>
 
         <div class="footer">F & H</div>
     </div>
