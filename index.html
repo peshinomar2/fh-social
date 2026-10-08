@@ -222,6 +222,8 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
             .qr {
                 width: 220px;
                 height: 220px;
+                object-fit: contain;
+                padding: 10px;
             }
 
             .socials {
@@ -232,7 +234,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
                 width: 48px;
                 height: 48px;
             }
-           ```css
+           
 .icon i {
     font-size: 27px;
 }
@@ -252,7 +254,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 .icon.tiktok {
     color: #ffffff;
 }
-```
+
 
 .social:nth-child(2) .icon {
     color: #E1306C;
@@ -270,6 +272,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
                 font-size: 11px;
             }
         }
+    
     </style>
 </head>
 
@@ -285,7 +288,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         </div>
 
         <div class="qr-card">
-            <div class="qr">QR CODE</div>
+           <img src="fh-social-qr.png"
+     alt="F&H Social QR Code"
+     class="qr">
 
             <div class="scan-title">Scan the QR code</div>
             <div class="scan-text">to visit our social media</div>
