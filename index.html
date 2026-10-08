@@ -280,6 +280,37 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     margin-top: 6px;
     color: #444;
 }
+
+/* Improve the header on mobile */
+.line-title {
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.connect {
+    white-space: nowrap;
+    letter-spacing: 4px;
+}
+
+@media (max-width: 450px) {
+    .line-title {
+        gap: 8px;
+        margin-bottom: 25px;
+    }
+
+    .connect {
+        font-size: 11px;
+        letter-spacing: 2px;
+        white-space: normal;
+        max-width: 175px;
+        line-height: 1.8;
+    }
+
+    .line {
+        width: 18px;
+        flex-shrink: 0;
+    }
+}
     
     </style>
 </head>
