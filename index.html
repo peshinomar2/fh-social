@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F&H | Connect With Us</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: #0b1018;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px 15px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 70px;
+            font-weight: bold;
+            letter-spacing: -5px;
+            margin-bottom: 10px;
+        }
+
+        .logo span {
+            font-weight: normal;
+        }
+
+        .line-title {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        .line {
+            width: 55px;
+            height: 1px;
+            background: white;
+            opacity: 0.7;
+        }
+
+        .connect {
+            font-size: 15px;
+            letter-spacing: 6px;
+        }
+
+        .qr-card {
+            background: white;
+            color: #111;
+            border-radius: 25px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.35);
+        }
+
+        .qr {
+            width: 260px;
+            height: 260px;
+            max-width: 100%;
+            margin: auto;
+            background: #eee;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            color: #555;
+            font-size: 14px;
+        }
+
+        .scan-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .scan-text {
+            color: #666;
+            margin-top: 6px;
+        }
+
+        .socials {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        .social {
+            text-decoration: none;
+            color: white;
+            padding: 10px 5px;
+            border-radius: 15px;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .social:hover {
+            transform: translateY(-5px);
+            background: rgba(255,255,255,0.08);
+        }
+
+        .icon {
+            width: 55px;
+            height: 55px;
+            margin: auto;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 25px;
+            font-weight: bold;
+            background: #202938;
+        }
+
+        .social-name {
+            font-size: 13px;
+            margin-top: 8px;
+        }
+
+        .footer {
+            margin-top: 30px;
+            opacity: 0.7;
+            letter-spacing: 5px;
+        }
+
+        /* WhatsApp popup */
+        .wa-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.75);
+            backdrop-filter: blur(6px);
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            z-index: 9999;
+        }
+
+        .wa-modal {
+            width: 100%;
+            max-width: 340px;
+            background: #151e2b;
+            color: white;
+            padding: 28px 22px;
+            border-radius: 22px;
+            text-align: center;
+            border: 1px solid #303c4c;
+            box-shadow: 0 20px 60px #0008;
+        }
+
+        .wa-modal h2 {
+            margin: 12px 0 8px;
+        }
+
+        .wa-modal p {
+            color: #aeb9c8;
+            font-size: 14px;
+            margin-bottom: 22px;
+        }
+
+        .wa-button {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            margin-top: 12px;
+            border: none;
+            border-radius: 12px;
+            background: #25D366;
+            color: #07140b;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .wa-button span {
+            display: block;
+            font-size: 13px;
+            margin-top: 5px;
+            font-weight: normal;
+        }
+
+        .wa-close {
+            margin-top: 18px;
+            color: #b9c2d0;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        @media (max-width: 450px) {
+            .logo {
+                font-size: 55px;
+            }
+
+            .connect {
+                font-size: 11px;
+                letter-spacing: 4px;
+            }
+
+            .line {
+                width: 25px;
+            }
+
+            .qr {
+                width: 220px;
+                height: 220px;
+            }
+
+            .socials {
+                gap: 5px;
+            }
+
+            .icon {
+                width: 48px;
+                height: 48px;
+            }
+
+            .social-name {
+                font-size: 11px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="logo">F<span>&</span>H</div>
+
+        <div class="line-title">
+            <div class="line"></div>
+            <div class="connect">CONNECT WITH US</div>
+            <div class="line"></div>
+        </div>
+
+        <div class="qr-card">
+            <div class="qr">QR CODE</div>
+
+            <div class="scan-title">Scan the QR code</div>
+            <div class="scan-text">to visit our social media</div>
+        </div>
+
+        <div class="socials">
+
+            <div class="social" onclick="openWhatsApp()">
+                <div class="icon">W</div>
+                <div class="social-name">WhatsApp</div>
+            </div>
+
+            <a href="https://www.instagram.com/langay_fh/"
+               class="social" target="_blank" rel="noopener noreferrer">
+                <div class="icon">I</div>
+                <div class="social-name">Instagram</div>
+            </a>
+
+            <a href="https://www.facebook.com/share/1C6jze4rGW/"
+               class="social" target="_blank" rel="noopener noreferrer">
+                <div class="icon">f</div>
+                <div class="social-name">Facebook</div>
+            </a>
+
+            <a href="https://www.tiktok.com/@langay_fh"
+               class="social" target="_blank" rel="noopener noreferrer">
+                <div class="icon">T</div>
+                <div class="social-name">TikTok</div>
+            </a>
+
+        </div>
+
+        <div class="footer">F & H</div>
+    </div>
+
+    <!-- WhatsApp number selection -->
+    <div class="wa-overlay" id="waOverlay"
+         onclick="closeWhatsApp(event)">
+
+        <div class="wa-modal" onclick="event.stopPropagation()">
+            <div style="font-size:42px">🟢</div>
+            <h2>Choose WhatsApp</h2>
+            <p>Select your preferred number</p>
+
+            <button class="wa-button"
+                onclick="goWhatsApp('9647702491815')">
+                WhatsApp 1
+                <span>0770 249 1815</span>
+            </button>
+
+            <button class="wa-button"
+                onclick="goWhatsApp('9647701466797')">
+                WhatsApp 2
+                <span>0770 146 6797</span>
+            </button>
+
+            <button class="wa-close" onclick="closeWhatsApp()">
+                Cancel
+            </button>
+        </div>
+    </div>
+
+    <script>
+        function openWhatsApp() {
+            document.getElementById("waOverlay").style.display = "flex";
+        }
+
+        function closeWhatsApp(event) {
+            if (event) event.stopPropagation();
+            document.getElementById("waOverlay").style.display = "none";
+        }
+
+        function goWhatsApp(number) {
+            window.open("https://wa.me/" + number, "_blank");
+            closeWhatsApp();
+        }
+    </script>
+</body>
+</html>
+
